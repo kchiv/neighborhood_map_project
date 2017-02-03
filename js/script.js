@@ -36,6 +36,8 @@ function loadData() {
             $nytElem.append('<li class="article">' + '<a href="' + article.web_url + '">' + article.headline.main + '</a>'
                 + '<p>' + article.snippet + '</p>' + '</li>');
         };
+    }).error(function(e){
+        $nytHeaderElem.text('New York Times articles could not be loaded.')
     });
 
     return false;
